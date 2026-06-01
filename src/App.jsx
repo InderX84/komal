@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useDarkMode } from './hooks/useDarkMode'
 import Preloader from './components/Preloader'
@@ -18,11 +18,12 @@ import CustomCursor from './components/CustomCursor'
 export default function App() {
   useDarkMode()
   const [loaded, setLoaded] = useState(false)
+  const handleDone = useCallback(() => setLoaded(true), [])
 
   return (
     <div>
       <CustomCursor />
-      <Preloader onDone={() => setLoaded(true)} />
+      <Preloader onDone={handleDone} />
 
       <AnimatePresence>
         {loaded && (
