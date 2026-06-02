@@ -14,7 +14,7 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="about" className="py-16 sm:py-24 bg-white dark:bg-slate-900 relative overflow-hidden">
+    <section id="about" className="min-h-screen flex flex-col justify-center py-16 sm:py-24 bg-white dark:bg-slate-900 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-primary-100 dark:bg-primary-900/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -59,11 +59,11 @@ export default function About() {
                   ))}
                 </div>
 
-                <div className="mt-4 sm:mt-6 flex items-center gap-3 p-3 sm:p-4 rounded-2xl bg-gradient-to-r from-orange-50 to-green-50 dark:from-orange-900/20 dark:to-green-900/20">
-                  <span className="text-2xl sm:text-3xl">🇮🇳</span>
+                <div className="mt-4 sm:mt-6 flex items-center gap-3 p-3 sm:p-4 rounded-2xl bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20">
+                  <span className="text-2xl sm:text-3xl">🎯</span>
                   <div>
-                    <div className="font-semibold text-gray-800 dark:text-white text-sm">Proud Indian</div>
-                    <div className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-400">Serving the nation is my calling</div>
+                    <div className="font-semibold text-gray-800 dark:text-white text-sm">Goal-Oriented</div>
+                    <div className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-400">Every action aligned with a bigger purpose</div>
                   </div>
                 </div>
 
@@ -96,10 +96,10 @@ export default function About() {
               <span className="text-gradient">Clear Vision</span>
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
-              I am a dedicated student with a strong academic foundation and a clear vision for my future. I believe in continuous learning, discipline, and perseverance.
+              Born and raised in Rajpura, Punjab, I am a commerce student with a sharp focus on academics and self-development. I thrive on challenges and believe every obstacle is a stepping stone.
             </p>
             <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-6 sm:mb-8">
-              My ambition is to join the Indian Foreign Service (IFS) and represent India on the global stage while contributing to society and making a positive impact.
+              My long-term vision is to clear the UPSC Civil Services Examination and serve the country through the Indian Foreign Service — bringing honour to my family and my nation.
             </p>
 
             <div className="space-y-2 sm:space-y-3">

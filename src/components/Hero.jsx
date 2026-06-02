@@ -78,7 +78,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6 max-w-xl mx-auto lg:mx-0"
             >
-              I am a passionate and determined student who believes that dedication, education, and hard work can turn dreams into reality. My goal is to serve my nation as an Indian Foreign Service Officer and make my family proud.
+              I am a passionate and determined student from Rajpura, Punjab. I believe in continuous learning, discipline, and hard work. Currently pursuing B.Com (Honours) at PMN College, I am building a strong foundation for my future in civil services.
             </motion.p>
 
             <motion.p
@@ -124,25 +124,33 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center"
           >
-            <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-pink-500 blur-2xl opacity-40 scale-110" />
-              <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary-400/30 animate-spin" style={{ animationDuration: '20s' }} />
+            {/* Single floating wrapper — everything moves together */}
+            <motion.div
+              animate={{ y: [-8, 8, -8] }}
+              transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+              className="relative"
+            >
+              {/* Glow */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-pink-500 blur-2xl opacity-40 scale-110 pointer-events-none" />
 
-              <motion.div
-                animate={{ y: [-8, 8, -8] }}
-                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96
-                           rounded-full overflow-hidden border-4 border-white/20 shadow-2xl shadow-primary-500/30"
-              >
+              {/* Spinning ring */}
+              <div
+                className="absolute inset-0 rounded-full border-2 border-dashed border-primary-400/30 animate-spin pointer-events-none"
+                style={{ animationDuration: '20s' }}
+              />
+
+              {/* Photo */}
+              <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96
+                           rounded-full overflow-hidden border-4 border-white/20 shadow-2xl shadow-primary-500/30">
                 <img
                   src={komalPic}
                   alt="Komal"
                   className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-purple-900/60 to-transparent" />
-              </motion.div>
+              </div>
 
-              {/* Badges — repositioned to not clip */}
+              {/* Badges */}
               <motion.div
                 animate={{ y: [-4, 4, -4] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
@@ -157,7 +165,7 @@ export default function Hero() {
               >
                 ✨ Dream Big
               </motion.div>
-            </div>
+            </motion.div>
           </motion.div>
 
         </div>

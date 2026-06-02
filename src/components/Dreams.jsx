@@ -5,7 +5,7 @@ const dreams = [
   {
     emoji: '🏛️',
     title: 'Become an IFS Officer',
-    desc: 'Serve India with dedication and represent the country across the world. This is my highest calling and deepest purpose.',
+    desc: 'Walk the halls of South Block, negotiate treaties, and represent India at the United Nations. This badge of honour drives every hour of my preparation.',
     color: 'from-primary-500 to-pink-500',
     bg: 'from-primary-50 to-pink-50 dark:from-primary-900/20 dark:to-pink-900/20',
     tag: 'Life Goal',
@@ -33,7 +33,7 @@ export default function Dreams() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="dreams" className="py-16 sm:py-24 bg-white dark:bg-slate-900 relative overflow-hidden">
+    <section id="dreams" className="min-h-screen flex flex-col justify-center py-16 sm:py-24 bg-white dark:bg-slate-900 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[800px] h-[400px] sm:h-[800px] bg-gradient-to-r from-primary-100/50 to-pink-100/50 dark:from-primary-900/10 dark:to-pink-900/10 rounded-full blur-3xl pointer-events-none" />
 
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -76,19 +76,6 @@ export default function Dreams() {
           ))}
         </div>
 
-        {/* Quote */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={inView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-10 sm:mt-16 text-center px-2"
-        >
-          <div className="inline-block glass dark:glass-dark rounded-2xl px-5 sm:px-8 py-4 sm:py-6 max-w-2xl w-full">
-            <p className="font-display text-base sm:text-xl italic text-gray-700 dark:text-gray-200 leading-relaxed">
-              "Every dream begins with a dreamer. Always remember, you have within you the strength, the patience, and the passion to reach for the stars."
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   )
